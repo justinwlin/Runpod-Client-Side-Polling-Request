@@ -1,0 +1,128 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "ffmpeg",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ffmpeg",
+        "description": "ffmpeg",
+        "detail": "ffmpeg",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "NoOutputFromRunpodException",
+        "kind": 6,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "class NoOutputFromRunpodException(Exception):\n    \"\"\"Exception raised when there is no output from Runpod.\"\"\"\ndef check_health(api_key, server_endpoint):\n    \"\"\"\n    Checks health and worker statistics of a particular endpoint.\n    Args:\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n    Returns:\n        dict: Health statistics response from Runpod.",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    },
+    {
+        "label": "check_health",
+        "kind": 2,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "def check_health(api_key, server_endpoint):\n    \"\"\"\n    Checks health and worker statistics of a particular endpoint.\n    Args:\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n    Returns:\n        dict: Health statistics response from Runpod.\n    \"\"\"\n    url = f\"https://api.runpod.ai/v2/{server_endpoint}/health\"",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    },
+    {
+        "label": "cancel_job",
+        "kind": 2,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "def cancel_job(job_id, api_key, server_endpoint):\n    \"\"\"\n    Cancels a transcription job given its job ID.\n    Args:\n        job_id (str): Job ID of the transcription request to cancel.\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n    Returns:\n        dict: Cancellation response from Runpod.\n    \"\"\"",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    },
+    {
+        "label": "send_async_rqeuest_to_runpod",
+        "kind": 2,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "def send_async_rqeuest_to_runpod(\n    payload_request, api_key, server_endpoint, execution_timeout=600000\n):\n    \"\"\"\n    Sends an asynchronous transcription request to Runpod.\n    Args:\n        base64_string_or_url (str): Base64-encoded audio data or a URL that starts with \"http\".\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n        execution_timeout (int): Execution timeout in milliseconds, default is 600,000 (10 minutes).",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    },
+    {
+        "label": "get_endpoint_status",
+        "kind": 2,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "def get_endpoint_status(job_id, api_key, server_endpoint):\n    \"\"\"\n    Gets the status of a transcription job from Runpod.\n    Args:\n        job_id (str): Job ID of the transcription request.\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n    Returns:\n        dict: Status response from Runpod.\n    \"\"\"",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    },
+    {
+        "label": "wait_for_job_to_complete",
+        "kind": 2,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "def wait_for_job_to_complete(\n    job_id, api_key, server_endpoint, polling_interval=20\n):\n    \"\"\"\n    Waits for the transcription job to complete and returns the output.\n    Args:\n        job_id (str): Job ID of the transcription request.\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n        sleep_interval (int, optional): Time in seconds to sleep between status checks. Default is 20 seconds.",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    },
+    {
+        "label": "runpod_api_request_and_poll",
+        "kind": 2,
+        "importPath": "runpod_client_helper",
+        "description": "runpod_client_helper",
+        "peekOfCode": "def runpod_api_request_and_poll(\n    payload, runpod_api_key, server_endpoint, polling_interval=20\n):\n    \"\"\"\n    Transcribes audio using Runpod's API.\n    Args:\n        base64_string_or_url (str): Base64-encoded audio data or a URL that starts with \"http\".\n        api_key (str): Runpod API key.\n        server_endpoint (str): Server endpoint.\n    Returns:",
+        "detail": "runpod_client_helper",
+        "documentation": {}
+    }
+]
